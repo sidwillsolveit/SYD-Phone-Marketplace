@@ -1,0 +1,147 @@
+
+.checkout-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: white;
+}
+
+.checkout-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.order-summary, .checkout-form {
+  flex: 1;
+  background: rgba(30, 42, 71, 0.7);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.order-summary h2, .checkout-form h2 {
+  color: #4bcffa;
+  border-bottom: 2px solid rgba(75, 207, 250, 0.3);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.order-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.order-item img {
+  width: 100px;
+  height: 140px;
+  object-fit: contain;
+}
+
+.price-breakdown {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(0,0,0,0.2);
+  border-radius: 12px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.price-row.total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0be881;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.promo-section {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.promo-section input {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.promo-section button {
+  background: #4bcffa;
+  color: #1e272e;
+  border: none;
+  border-radius: 8px;
+  padding: 0 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.checkout-form .form-group {
+  margin-bottom: 1.2rem;
+}
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.3);
+  color: white;
+  font-size: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.place-order-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #0be881;
+  color: #1e272e;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.place-order-btn:hover {
+  background: #05c46b;
+}
+
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

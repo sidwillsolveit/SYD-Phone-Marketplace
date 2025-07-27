@@ -1,0 +1,1015 @@
+:root {
+  --dark-blue: #0a3d62;
+  --light-blue: #1e5799;
+  --accent: #4bcffa;
+  --text-light: #f0f8ff;
+  --text-muted: #b0bec5;
+  --card-bg: #1e2a47;
+  --gradient-bg: linear-gradient(135deg, #0a3d62, #1e5799);
+}
+
+/* Reset & Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--gradient-bg);
+  color: var(--text-light);
+  min-height: 100vh;
+}
+
+/* Header */
+.main-header {
+  width: 100%;
+  background: #222c3d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.company-name {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+}
+
+.company-tagline {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.contact-info {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Responsive Header */
+@media (max-width: 900px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 10px;
+  }
+  .nav-links {
+    margin: 8px 0;
+    gap: 16px;
+  }
+  .contact-info {
+    font-size: 0.85rem;
+    margin-top: 6px;
+  }
+}
+
+/* Page Containers */
+.home-page,
+.about-us-page,
+.contact-page,
+.products-page {
+  padding: 2rem 5%;
+  padding-top: 110px; /* For fixed header */
+  min-height: 100vh;
+  background: var(--gradient-bg);
+  color: var(--text-light);
+}
+
+/* Home Page */
+.home-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.06em;
+}
+
+.home-header p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.phones-display,
+.phones-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.home-description {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #d1e7ff;
+}
+
+/* About Us & Contact Page */
+.about-us-page h1,
+.contact-page h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.about-us-page p,
+.contact-page p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #d1e7ff;
+}
+
+/* Phone Card */
+.phone-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  width: 300px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 24px 40px rgba(0,0,0,0.23);
+}
+
+.phone-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.phone-image {
+  width: 180px;
+  height: 260px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+}
+
+.phone-details {
+  text-align: center;
+}
+
+.phone-details h3 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+  letter-spacing: 0.03em;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin: 0.7rem 0;
+}
+
+.buy-btn {
+  background: #0be881;
+  color: #1e272e;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.buy-btn:hover {
+  background: #05c46b;
+  transform: scale(1.05);
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+}
+
+.specs-btn {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.specs-btn:hover {
+  background: rgba(75, 207, 250, 0.12);
+}
+
+.compare-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.compare-checkbox input {
+  cursor: pointer;
+}
+
+/* Specs Panel */
+.specs-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--light-blue);
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 420px;
+  z-index: 100;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.specs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.spec-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.spec-key {
+  font-weight: bold;
+}
+
+/* Comparison Modal */
+.comparison-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 61, 98, 0.93);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--light-blue);
+  border-radius: 15px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 2rem 1.5rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.comparison-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-row {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.table-row.header {
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.table-cell {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+}
+
+.spec-key {
+  text-align: left;
+}
+
+/* Compare Button */
+.compare-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0 0.5rem 0;
+}
+
+.compare-btn {
+  background: #ff9f1a;
+  color: #1e272e;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.15rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+}
+
+.compare-btn:hover {
+  background: #ffaf40;
+  transform: scale(1.05);
+}
+
+/* Close Buttons */
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #ff9f1a;
+}
+
+/* Responsive Cards & Layout */
+@media (max-width: 700px) {
+  .phones-display,
+  .phones-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .phone-card {
+    width: 90vw;
+    max-width: 350px;
+    padding: 1.2rem 0.5rem;
+  }
+  .specs-panel,
+  .modal-content {
+    padding: 1.2rem 0.5rem;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+/* Specs Panel Styles */
+.specs-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.specs-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1e2a47;
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  z-index: 1001;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.specs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #4bcffa;
+  padding-bottom: 1rem;
+}
+
+.specs-header h2 {
+  margin: 0;
+  color: #4bcffa;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  color: #ff6b6b;
+}
+
+.specs-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.spec-label {
+  font-weight: bold;
+  color: #4bcffa;
+}
+
+.spec-value {
+  color: #ffffff;
+}
+
+.specs-btn {
+  background: transparent;
+  border: 2px solid #4bcffa;
+  color: #4bcffa;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.specs-btn:hover {
+  background: #4bcffa;
+  color: #1e2a47;
+}
+.specs-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+}
+
+.specs-panel {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1e2a47;
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  z-index: 1001;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+/* Comparison Table Styles */
+.comparison-table {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 1000px;
+}
+
+.comparison-table h2 {
+  text-align: center;
+  color: #4bcffa;
+  margin-bottom: 1.5rem;
+}
+
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(30, 42, 71, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.comparison-table th {
+  background: #222c3d;
+  padding: 1rem;
+  text-align: center;
+  color: #4bcffa;
+  font-size: 1.1rem;
+}
+
+.comparison-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparison-table .spec-key {
+  font-weight: bold;
+  background: rgba(75, 207, 250, 0.1);
+}
+
+.highlight-cell {
+  background: rgba(75, 207, 250, 0.2) !important;
+  font-weight: bold;
+  color: #4bcffa;
+}
+
+.compare-btn {
+  background: #ff9f1a;
+  color: #1e272e;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.15rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+}
+
+.compare-btn:hover {
+  background: #ffaf40;
+  transform: scale(1.05);
+}
+.buy-btn {
+  background: #0be881;
+  color: #1e272e;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin: 1rem 0;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.buy-btn:hover {
+  background: #05c46b;
+  transform: scale(1.05);
+}
+:root {
+  --dark-blue: #0a3d62;
+  --light-blue: #1e5799;
+  --accent: #4bcffa;
+  --text-light: #f0f8ff;
+  --text-muted: #b0bec5;
+  --card-bg: #1e2a47;
+  --gradient-bg: linear-gradient(135deg, #0a3d62, #1e5799);
+}
+
+/* Page Containers */
+.home-page,
+.about-us-page,
+.contact-page,
+.products-page {
+  padding: 2rem 5% 2rem 5%;
+  padding-top: 110px; /* For fixed header */
+  min-height: 100vh;
+  background: var(--gradient-bg);
+  color: var(--text-light);
+}
+
+/* Example for home header */
+.home-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.06em;
+}
+
+.home-header p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #0a3d62, #1e5799);
+  color: #f0f8ff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.page {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.home-page, .about-us-page, .motive-page, .upcoming-page, .contact-page {
+  padding-top: 110px;
+  min-height: 100vh;
+  background: var(--gradient-bg);
+  color: var(--text-light);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .home-page, .about-us-page, .motive-page, .upcoming-page, .contact-page {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 90px;
+  }
+}
+
+
+
+/* Content styles */
+.phones-display, .products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.phone-card, .product-card {
+  background: #1e2a47;
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Footer or other elements can be added as needed */
+.motive-page {
+  padding-top: 110px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a3d62, #1e5799);
+  color: #f0f8ff;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .motive-page {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 90px;
+  }
+}
+.home-page {
+  padding-top: 110px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a3d62, #1e5799);
+  color: #f0f8ff;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.phones-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.phone-card {
+  background: #1e2a47;
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 90px;
+  }
+  .phones-display {
+    flex-direction: column;
+    align-items: center;
+  }
+  .phone-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+.home-page {
+  min-height: 100vh;
+  padding-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #0a3d62, #1e5799);
+}
+.phones-display {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.phone-fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s, transform 1s;
+  background: #1e2a47;
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.phone-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 900px) {
+  .phones-display {
+    flex-direction: column;
+    align-items: center;
+  }
+  .phone-fade-in {
+    width: 100% !important;
+    max-width: 350px;
+  }
+}
+.compare-btn {
+  background: #ff9f1a;
+  color: #1e272e;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.compare-btn:hover {
+  background: #ffaf40;
+  transform: scale(1.05);
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222c3d;
+  padding: 1rem 5%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.company-logo {
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: #fff;
+  margin-left: 1.5rem;
+  letter-spacing: 0.08em;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem; /* Controls space between links/buttons */
+}
+
+.header-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.header-nav a:hover {
+  background: #4bcffa;
+  color: #222c3d;
+}
+
+.contact-btn {
+  background: #ffd166;
+  color: #1e272e;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-left: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+  transition: background 0.2s, color 0.2s;
+}
+
+.contact-btn:hover {
+  background: #ffe066;
+  color: #111;
+}
+
+.login-btn {
+  background: linear-gradient(90deg, #4bcffa 40%, #0be881 100%);
+  color: #222c3d;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+  transition: background 0.2s, color 0.2s;
+}
+
+.login-btn:hover {
+  background: linear-gradient(90deg, #0be881 40%, #4bcffa 100%);
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 1rem;
+  }
+  .header-nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  .company-logo {
+    margin-left: 0.7rem;
+    font-size: 1.2rem;
+  }
+}
+.phone-card {
+  width: 260px;
+  height: 370px;
+  border-radius: 18px;
+  background: #1e2a47;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 0.7rem;
+  position: relative;
+}
+
+.phone-image-area {
+  width: 100%;
+  height: 76%; /* Image takes most of the card */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a3d62 60%, #4bcffa 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.phone-image {
+  max-width: 92%;
+  max-height: 92%;
+  object-fit: contain; /* Ensures full image is visible, no cropping */
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 4px 18px rgba(0,0,0,0.14));
+}
+
+.phone-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(30,42,71,0.98);
+  padding: 1.1rem 1rem 1.2rem 1rem;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  z-index: 2;
+  min-height: 105px;
+  text-align: left;
+}
