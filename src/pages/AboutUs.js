@@ -1,5 +1,5 @@
-
 import React from 'react';
+import sydprof from '../assets/profile.jpg';
 
 const AboutUs = () => (
   <div
@@ -29,7 +29,7 @@ const AboutUs = () => (
     }}>
       {/* Profile Image */}
       <img
-        src="https://pplx-res.cloudinary.com/image/private/user_uploads/66646096/6fa0f8fb-c105-4be8-979d-149415007737/image.jpg"
+        src={sydprof}
         alt="Siddhant Mathur"
         style={{
           borderRadius: '50%',
@@ -41,21 +41,30 @@ const AboutUs = () => (
         }}
       />
       <h1 style={{ color: '#4bcffa', fontWeight: 700, fontSize: '2.4rem', marginBottom: 0 }}>Siddhant Mathur</h1>
-      <p style={{ fontSize: '1.1rem', color: '#b0bec5', marginBottom: '1.7rem' }}>
-        Founder & CEO, YFONE
+      <p style={{ fontSize: '1.1rem', color: '#b0bec5', marginBottom: '0.7rem' }}>
+        B.Tech, Computer Science &amp; Engineering (2022-2026)<br />
+        Minor in Professional Communication<br />
+        Manipal Institute of Technology
       </p>
-      <div style={{ fontSize: '1.15rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
-        <span role="img" aria-label="wave">👋</span> Hi, I'm Siddhant—an aspiring tech entrepreneur and the creator of YFONE. I am currently pursuing my <b>B.Tech in Computer Science</b> at Manipal Institute of Technology (2022-2026), and I am passionate about building technology that empowers people.
-        <br /><br />
-        <b>What drives me?</b> <br />
-        <span style={{ color: '#0be881' }}>Innovation, learning, and making a real difference.</span> With hands-on experience in web development, data analytics, and software projects, I love turning ideas into user-friendly products.
-        <br /><br />
-        <b>Key Skills:</b> <span style={{ color: '#ffe066' }}>Web Development, Data Analytics, Communication, C Programming, Computer Networks</span>
-        <br />
-        <b>Projects:</b> <span style={{ color: '#ffe066' }}>Fitness Tracker Website, Image Processing (CPU vs GPU), Music Streaming App</span>
-        <br /><br />
+      <div style={{ margin: '1rem 0 1.7rem' }}>
+        <span style={{ display: 'inline-block', color: '#4bcffa', fontWeight: 'bold', marginRight: '1.5rem' }}>
+          siddhantmathur.mit@gmail.com
+        </span>
+        <span style={{ color: '#b0bec5' }}>|</span>
+        <span style={{ color: '#fff', marginLeft: '1.5rem' }}>+91 9319635256</span>
+      </div>
+      {/* Professional Summary */}
+      <div style={{ fontSize: '1.09rem', lineHeight: 1.7, marginBottom: '1.5rem', color: '#b0bec5' }}>
+        I’m a Computer Science Engineering student skilled in <span style={{ color: '#ffe066' }}>React.js, JavaScript, HTML5, CSS3, C, Java, Python, and SQL</span>.<br />
+        <span style={{ color: '#fff' }}>Frontend Highlights:</span> Developed a responsive React-based e-commerce frontend for SYD/YFONE with animated product showcases, a client-side promo code system, and live price updates.<br />
+        <span style={{ color: '#fff' }}>Internship Experience:</span> Created automation scripts in Python and Dynamo at Sanrachna to enhance virtual modeling workflows for real-world architecture projects. Worked on React frontend features for a university research portal, including interactive report generation and team collaboration.<br />
+        <span style={{ color: '#fff' }}>Side Projects:</span> Built a MySQL music streaming backend and several web apps with a focus on responsive design and user experience.
+      </div>
+      {/* Hobbies Section (kept as requested) */}
+      <div style={{ fontSize: '1.09rem', color: '#b0bec5', marginBottom: '1.5rem' }}>
         When I'm not coding, you'll find me playing chess, tech blogging, or volunteering for NGOs.
       </div>
+      {/* Contact & Social Links */}
       <div style={{ marginBottom: '1.5rem' }}>
         <a
           href="mailto:siddhantmathur.mit@gmail.com"
